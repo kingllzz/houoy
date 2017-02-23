@@ -65,6 +65,7 @@ public class EssayController {
         return resultVO;
     }
 
+    @CrossOrigin
     @GetMapping("/essay")
     public JquryDataTablesVO<EssayVO> retrieve(EssayVO vo, HttpServletRequest request) {
         vo = (EssayVO) JqueryDataTablesUtil.filterParam(vo, request);
