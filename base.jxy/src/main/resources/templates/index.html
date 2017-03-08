@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.css">
+</link>
+<body>
+<div class="box">
+    <div class="word">家校易测试跨域问题页面(仅作为测试使用）</div>
+    <div class="login-box">
+        <div class="login-content ">
+            <div class="form">
+                <div class="form-group" style="margin-top: 20px;">
+                    <div class="col-xs-12  ">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input type="text" id="user" name="user" class="form-control user"
+                                   placeholder="用户名"> </input>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-xs-12  ">
+                        <div class="input-group">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                            <input type="password" id="pwd" name="password" class="form-control pwd"
+                                   placeholder="密码"> </input>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-xs-12 text-center">
+                        <input type="button" name="btn" class="login" id="login" value="登录"> </input>
+                    </div>
+                    <div class="col-xs-12 text-center">
+                        <input type="button" name="btn" class="login" id="getSession" value="getSession"> </input>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="/bootstrap/dist/js/bootstrap.js"></script>
+<script type="text/javascript">
+    /*判断*/
+    var username = document.getElementById('user');
+    var password = document.getElementById('pwd');
+
+    var ip = 'localhost';
+    var port = '8889';
+    var url = "http://" + ip + ":" + port;
+
+    $('#login').on('click', function () {
+        if (username.value == "" || password.value == "") {
+            alert("用户名或密码不能为空");
+        } else {
+            $.post(url + "/api/login/signin",
+                    {
+                        user_code: username.value,
+                        password: password.value
+                    },
+                    function (data, status, xhr) {
+                        if (data.success) {
+                            console.log(xhr.getResponseHeader("x-auth-token"));
+                            xauthtoken = "";
+                            //location.href = "index.html";
+                        } else {
+                            alert(data.msg);
+                        }
+                    }
+            );
+        }
+    });
+
+    $('#getSession').on('click', function () {
+        $.post(url + "/api/login/getSession",
+                {},
+                function (data) //回传函数
+                {
+                    alert("session" + data);
+                }
+        );
+
+//        $.ajax({
+//            type: 'post',
+//            url: contextPath + '/api/login/getSession',
+//            contentType: "application/json;charset=UTF-8",
+//            dataType: "json",
+//            data: "sfsd",
+//            success: function (data) {
+//                alert("session" + data);
+//            },
+//            error: function (data) {
+//                alert("保存失败！");
+//            }
+//        });
+    });
+
+
+    $('#reset').on('click', function () {
+        location.href = "update_pwd";
+    });
+</script>
+</html>
