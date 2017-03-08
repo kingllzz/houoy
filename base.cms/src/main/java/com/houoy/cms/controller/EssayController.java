@@ -4,8 +4,8 @@ import com.houoy.cms.config.CommonConfig;
 import com.houoy.cms.config.JqueryDataTablesUtil;
 import com.houoy.cms.service.EssayService;
 import com.houoy.cms.vo.EssayVO;
-import com.houoy.cms.vo.JquryDataTablesVO;
-import com.houoy.cms.vo.RequestResultVO;
+import com.iandtop.saas.smartpark.vo.JquryDataTablesVO;
+import com.iandtop.saas.smartpark.vo.RequestResultVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

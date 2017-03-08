@@ -1,5 +1,6 @@
 package com.houoy.cms.vo;
 
+import com.iandtop.saas.smartpark.vo.SuperVO;
 import org.springframework.data.annotation.Id;
 
 /**

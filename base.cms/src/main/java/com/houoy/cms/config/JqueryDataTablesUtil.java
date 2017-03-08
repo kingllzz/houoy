@@ -1,6 +1,7 @@
 package com.houoy.cms.config;
-import com.houoy.cms.vo.JquryDataTablesVO;
-import com.houoy.cms.vo.SuperVO;
+
+import com.iandtop.saas.smartpark.vo.JquryDataTablesVO;
+import com.iandtop.saas.smartpark.vo.SuperVO;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
