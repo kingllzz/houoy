@@ -28,8 +28,8 @@ public class Test1 {
     }
 
     public static void main(String[] args) {
-        Test1 test1 = new Test1();
-        Test1 test2 = new Test1();
+        final Test1 test1 = new Test1();
+        final Test1 test2 = new Test1();
 
 //        CountDownLatch
         Thread threads = new Thread(new Runnable() {
