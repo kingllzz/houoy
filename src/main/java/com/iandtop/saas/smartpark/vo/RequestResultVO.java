@@ -1,4 +1,4 @@
-package com.houoy.cms.vo;
+package com.iandtop.saas.smartpark.vo;
 
 import java.io.Serializable;
 import java.util.LinkedHashMap;

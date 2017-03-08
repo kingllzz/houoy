@@ -1,11 +1,12 @@
-package com.houoy.cms.vo;
+package com.iandtop.saas.smartpark.vo;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * @author andyzhao
  */
-public abstract class SuperVO {
+public abstract class SuperVO implements Serializable{
 
     private String memo;
 
@@ -31,7 +32,6 @@ public abstract class SuperVO {
 
     //排序方法asc desc
     private String orderDir;
-
 
     //冗余字段
     //树桩结构数据存储子类

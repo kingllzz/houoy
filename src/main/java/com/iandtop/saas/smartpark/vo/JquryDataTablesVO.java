@@ -1,4 +1,4 @@
-package com.houoy.cms.vo;
+package com.iandtop.saas.smartpark.vo;
 
         import java.util.List;
 
@@ -16,11 +16,11 @@ public class JquryDataTablesVO<T> {
     /**
      * 数据库里总共记录数
      */
-    private Long recordsTotal;
+    private long recordsTotal;
     /**
      * 过滤后的记录数
      */
-    private Long recordsFiltered;
+    private long recordsFiltered;
     /**
      * 数据
      */
@@ -30,12 +30,28 @@ public class JquryDataTablesVO<T> {
      */
     private String error;
 
-    public String getError() {
-        return error;
+    public int getDraw() {
+        return draw;
     }
 
-    public void setError(String error) {
-        this.error = error;
+    public void setDraw(int draw) {
+        this.draw = draw;
+    }
+
+    public long getRecordsTotal() {
+        return recordsTotal;
+    }
+
+    public void setRecordsTotal(long recordsTotal) {
+        this.recordsTotal = recordsTotal;
+    }
+
+    public long getRecordsFiltered() {
+        return recordsFiltered;
+    }
+
+    public void setRecordsFiltered(long recordsFiltered) {
+        this.recordsFiltered = recordsFiltered;
     }
 
     public List<T> getData() {
@@ -46,27 +62,11 @@ public class JquryDataTablesVO<T> {
         this.data = data;
     }
 
-    public int getDraw() {
-        return draw;
+    public String getError() {
+        return error;
     }
 
-    public void setDraw(int draw) {
-        this.draw = draw;
-    }
-
-    public Long getRecordsTotal() {
-        return recordsTotal;
-    }
-
-    public void setRecordsTotal(Long recordsTotal) {
-        this.recordsTotal = recordsTotal;
-    }
-
-    public Long getRecordsFiltered() {
-        return recordsFiltered;
-    }
-
-    public void setRecordsFiltered(Long recordsFiltered) {
-        this.recordsFiltered = recordsFiltered;
+    public void setError(String error) {
+        this.error = error;
     }
 }
