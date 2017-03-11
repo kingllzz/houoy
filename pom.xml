@@ -13,6 +13,8 @@
         <module>base.vertxwebserver</module>
         <module>base.mongodb</module>
         <module>base.cms</module>
+        <module>base.im</module>
+        <module>base.jxy</module>
     </modules>
 
 

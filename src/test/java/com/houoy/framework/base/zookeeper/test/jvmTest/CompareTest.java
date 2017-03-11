@@ -1,5 +1,7 @@
 package com.houoy.framework.base.zookeeper.test.jvmTest;
 
+import java.util.List;
+
 public class CompareTest {
 
     public static void main(String[] args) {
@@ -8,16 +10,13 @@ public class CompareTest {
         Integer isi = 1002;
         System.out.println(isi==ii);
 
-
         String a = "asdfa";
         String b= "asdfa";
         System.out.println(a==b);
 
-
         String bb = new String("a");
         String aa = new String("asdfa");
         System.out.println(aa==a);
-
 
         int ia = ii;
         System.out.println(ia==ii);
@@ -26,7 +25,6 @@ public class CompareTest {
         Integer iii = 1111 ;
         int iiii = 1111 ;
         Integer iisi = iiii ;
-
 
         System.out.println(iii==iisi);
 
