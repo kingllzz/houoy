@@ -1,15 +1,14 @@
-package com.houoy.framework.base.zookeeper.test.collection;
+package com.houoy.framework.base.zookeeper.test.collection.map;
 
-import java.util.HashMap;
+import java.util.Hashtable;
 import java.util.Map;
 
 /**
- * Created by Administrator on 2017-03-09.
+ * Created by Administrator on 2017-03-13.
  */
-public class MAPTEST {
-
+public class HashtableTEST {
     public static void main(String[] args) throws Throwable {
-        Map<String, String> map = new HashMap();
+        Map<String, String> map = new Hashtable();
         map.put("a", "a");
         map.put("a", "a");
         map.put("a", "a");
